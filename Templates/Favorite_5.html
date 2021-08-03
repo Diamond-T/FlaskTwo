@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4>My name is Diamond</h4>
+
+<p>Here are my favorite things:</p>
+<ol>
+    {% for f in favorites %}
+        {% if f == 'My Favorites' %}
+            <h1>{{ f }}</h1>
+        {% else %}
+            <li>{{ f }}</li>
+        {% endif %}
+    {% endfor %}
+</ol>
+
+{% endblock content %}
+
